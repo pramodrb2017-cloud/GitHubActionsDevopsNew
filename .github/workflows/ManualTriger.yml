@@ -7,10 +7,15 @@ on:
  description: 'Name'
  type: String
  default: 'Test'
+ age:
+ descripation: "Age"
+ type: number
+ required :  true
+ jobs:
+ Manual:
+ 
     
-  push:
-    branches:
-      - main
+ 
 
 jobs:
   demo:
