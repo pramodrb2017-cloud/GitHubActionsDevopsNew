@@ -2,6 +2,11 @@ name: Manaual Triger
 
 on:
   workflow_dispatch:
+ inputs:
+ name:
+ description: 'Name'
+ type: String
+ default: 'Test'
     
   push:
     branches:
