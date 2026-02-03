@@ -1,5 +1,5 @@
 
-name: DevopsManaualWOrkFlow
+name: Manaual Triger
 
 on:
   workflow_dispatch:
@@ -8,14 +8,19 @@ on:
  description: 'Name'
  type: String
  default: 'Test'
+ age:
+ descripation: "Age"
+ type: number
+ required :  true
+ jobs:
+ Manual:
+ 
     
-  push:
-    branches:
-      - main
+ 
 
 jobs:
-  demo:
+  manaual:
     runs-on: ubuntu-latest
     steps:
-      - name: Greetings
-        run: echo "${{ inputs.name }}"
+      - name: age
+        run: echo "${{ inputs.age }}"
