@@ -1,13 +1,26 @@
-def hello():
-    print("hi")
 
-def bye():
-    print("bye")
+name: Manaual Triger
 
-methods = {
-    "1": hello,
-    "2": bye
-}
+on:
+  workflow_dispatch:
+ inputs:
+ name:
+ description: 'Name'
+ type: String
+ default: 'Test'
+ age:
+ descripation: "Age"
+ type: number
+ required :  true
+ jobs:
+ Manual:
+ 
+    
+ 
 
-choice = input("Enter 1 for hello, 2 for bye: ")
-methods[choice]()
+jobs:
+  manaual:
+    runs-on: ubuntu-latest
+    steps:
+      - name: age
+        run: echo "${{ inputs.age }}"
