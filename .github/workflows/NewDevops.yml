@@ -1,10 +1,21 @@
-name: Hello world!
-'on':
+
+name: DevopsManaualWOrkFlow
+
+on:
+  workflow_dispatch:
+ inputs:
+ name:
+ description: 'Name'
+ type: String
+ default: 'Test'
+    
   push:
     branches:
       - main
+
 jobs:
-  sayHelloWorld:
+  demo:
     runs-on: ubuntu-latest
     steps:
-      - uses: gr2m/hello-world-js-action@v1.x
+      - name: Greetings
+        run: echo "${{ inputs.name }}"
